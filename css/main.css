@@ -1,0 +1,748 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(29, 36, 32, 1) 0%,
+    rgba(18, 32, 111, 1) 51%,
+    rgba(29, 36, 32, 1) 100%
+  );
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.55;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: clamp(1.25rem, -0.9375rem + 7vw, 3rem);
+}
+
+section {
+  position: relative;
+}
+
+section.video:before,
+section.music:before,
+section:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(/images/noise10.png);
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+}
+
+/*  HEADER  */
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 14;
+}
+
+.header__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  padding-left: 1rem;
+}
+
+.header .logo {
+  display: inline-block;
+  margin-left: 1rem;
+  width: 100px;
+}
+
+.header .logo img {
+  width: 100%;
+}
+
+.header .logo:hover img {
+  opacity: 1;
+}
+
+/*  TOP NAV */
+
+.main-nav {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.main-nav__nav {
+  margin-left: auto;
+}
+
+.main-nav__social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 160px;
+}
+.main-nav__social li {
+  list-style-type: none;
+}
+
+.main-nav__social a {
+  padding: 0.7rem;
+  display: block;
+}
+
+.main-nav__social img {
+  width: 100%;
+}
+
+.main-nav__social a img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main-nav__social a:hover img,
+.main-nav__social a:focus img {
+  opacity: 0.7;
+}
+
+.main-nav__social a[href*="instagram"]:hover img {
+  display: flex;
+}
+
+.main-nav a {
+  color: #fff;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+/*  HERO  */
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/john-matychuk-gUK3lA3K7Yo-unsplash.jpg") no-repeat
+    center center / cover;
+  z-index: 1;
+  margin: 0;
+}
+
+.hero__background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 5;
+  max-width: 90%;
+  padding: 2rem;
+}
+
+.hero__title {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: #fff;
+  line-height: 1;
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  font-weight: 300;
+}
+
+.hero__title span {
+  display: block;
+  font-size: clamp(2.5rem, 9vw, 6rem);
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  line-height: 1.5;
+  color: #fff;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Bill I added markup for a mobile toggle if necessary. */
+.toggle-mobile-but {
+  display: none;
+}
+
+@media (max-width: 499px) {
+  .hero__subtitle strong {
+    display: block;
+  }
+  .hero__subtitle span {
+    display: none;
+  }
+  .hero__title span {
+    display: block;
+    font-size: 3.3rem;
+    margin: 1rem 0;
+  }
+
+  .main-nav a {
+    font-size: 1rem;
+  }
+
+  .header .main-nav li {
+    margin: 0 1rem;
+  }
+
+  .header .main-nav__nav {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+/* About */
+.about {
+  padding: 4rem 1rem;
+}
+
+.about__desc p {
+  margin-top: 0;
+}
+
+.about__desc p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.about-bio__wrapper figure {
+  border: 2px solid #6d6d88;
+}
+
+.about-bio__wrapper figure img {
+  display: block;
+  width: 100%;
+}
+
+.about-bio__wrapper figure header {
+  background-color: #dddee9;
+  padding: 0 1rem;
+}
+
+.about-bio__wrapper figure h4 {
+  color: #000;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.about-bio__wrapper figure p {
+  font-size: 1rem;
+}
+
+.about-bio__wrapper figure div {
+  padding: 0 1rem;
+}
+
+@media (min-width: 48rem) {
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-content: flex-start;
+    padding: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-size: cover;
+  }
+
+  .about header h3 {
+    margin: 0;
+  }
+
+  .about__desc {
+    margin-left: auto;
+  }
+
+  .about__desc p {
+    font-size: 1.5rem;
+  }
+
+  .about-bio__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 4rem;
+    position: relative;
+    z-index: 5;
+    padding: 0 1rem;
+  }
+
+  .about-bio__wrapper figure {
+    margin: 0;
+  }
+
+  .about-bio__wrapper figure div {
+    padding: 1rem 2rem;
+  }
+
+  .about-bio__wrapper figure header {
+    padding: 0 2rem;
+  }
+
+  .about-bio__wrapper figure h4 {
+    font-size: 1.5rem;
+  }
+
+  .about-bio__wrapper figure p {
+    font-size: 1.125rem;
+  }
+}
+
+/*  Music  */
+
+.about {
+  padding: 7rem 1rem;
+}
+
+.music {
+  padding: 8rem 2rem;
+  background: rgba(240, 240, 240, 0.2);
+}
+
+.soundcloud-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 120%;
+  height: 0;
+  overflow: hidden;
+}
+
+.soundcloud-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 48rem) {
+  .music {
+    padding: 10rem 1rem;
+  }
+
+  .music__wrapper {
+    display: grid;
+    grid-template-columns: 170px auto 170px;
+    gap: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .soundcloud-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 60%;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+/* Events */
+
+#events {
+  scroll-margin-top: 100px;
+}
+
+.event {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.events__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.events__header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.events__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+}
+
+.events__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+
+  /* 
+   Bill,
+   Change this  if you want to limit the height of the events list anything expanding will scroll. 
+   
+   */
+  max-height: 600px;
+}
+
+.event {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.event__icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: #093b75;
+  color: white;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.event__details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.event__title,
+.event__title a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  color: #133e71;
+}
+
+.event__meta {
+  font-size: 1rem;
+  color: #1b1c23;
+  display: flex;
+  align-items: flex-start;
+  margin: 5px 0;
+}
+
+.event__meta a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #133e71;
+}
+
+.event__meta strong {
+  margin: 0 5px;
+}
+
+.event__meta img {
+  width: 1.4rem;
+  margin-right: 10px;
+}
+
+.event__meta h4,
+.event__meta h4 a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.event__meta a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 48rem) {
+  .events {
+    padding: 8rem 2rem;
+  }
+  .events__title {
+    font-size: 2rem;
+  }
+
+  .event__details {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+/* Hero Section*/
+
+.background-img img {
+  display: none;
+}
+.background-img {
+  width: 100%;
+  height: 100%;
+}
+.background-img {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #000000;
+  background-image: none;
+  background-origin: padding-box;
+  background-position: 50% 50% !important;
+  background-repeat: repeat;
+  background-size: cover !important;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/* Main menu */
+
+.main-nav li {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-left: 1.9625rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.main-menu li a,
+.main-nav li span {
+  color: #ffffff;
+  position: relative;
+  padding: 1.2rem 0;
+}
+.main-nav li span.search-ico {
+  cursor: pointer;
+  color: #ff5252;
+}
+.hero-content {
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  z-index: 5;
+}
+
+/***  Signup Form **/
+.subscribe {
+  padding: 3rem 1rem;
+  background: rgba(240, 240, 240, 0.2);
+}
+
+#mc_embed_signup .gig-form .indicates-required {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+#mc_embed_signup form.gig-form {
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+#mc_embed_signup .gig-form input {
+  height: 30px;
+  padding: 0;
+}
+
+#mc_embed_signup .gig-form .mc-field-group {
+  padding-bottom: 1rem;
+}
+
+#mc_embed_signup .gig-form .asterisk {
+  line-height: 10px;
+}
+.refferal_badge {
+  display: none !important;
+}
+
+#mc_embed_signup .gig-form .button {
+  height: 40px;
+  padding: 0 2rem;
+  background-color: #2b6c93;
+  margin-top: 10px;
+}
+
+#mc_embed_signup .gig-form .button:hover {
+  background-color: #184a6a;
+}
+
+.subscribe__wrapper .main-nav__social {
+  width: 300px;
+  padding: 0;
+}
+
+.subscribe__wrapper .main-nav__social a {
+  width: 40px;
+}
+
+@media (max-width: 47.5rem) {
+  .main-nav__social {
+    display: none;
+  }
+
+  .header__logo {
+    display: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .subscribe {
+    padding: 6rem 2rem;
+  }
+
+  .subscribe__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .subscribe__wrapper header p {
+    font-size: 1.25rem;
+    max-width: 70%;
+  }
+}
+
+.contact {
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 48rem) {
+  .contact {
+    padding: 6rem 2rem;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer__wrapper h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.sneaky-ish-self-promotion {
+  margin-left: auto;
+}
+
+.sneaky-ish-self-promotion a {
+  color: #fff;
+}
+
+.sneaky-ish-self-promotion a:hover {
+  color: #b5b5b5;
+}
+
+@media (min-width: 48rem) {
+  .footer__wrapper {
+    padding: 5rem 1rem;
+  }
+}
+
+/* Video */
+.video {
+  padding: 4rem 1rem;
+}
+
+.video__grid figure {
+  margin-bottom: 1rem;
+}
+
+.video__grid-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio, it might need to change  */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.video__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (min-width: 48rem) {
+  .video {
+    padding: 10rem 2rem;
+  }
+  .video__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .video__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
