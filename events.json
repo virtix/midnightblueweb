@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Blue Note Jazz Club",
+        "url": "https://www.bluenotejazz.com/nyc/",
+        "date": "April 15, 2025",
+        "time": "8:00 PM",
+        "location": "131 W 3rd St, New York, NY 10012",
+        "map": "https://www.google.com/maps/dir//blue%20note%20club%20nyc"
+    },
+    {
+        "title": "Smalls Jazz Club NYC",
+        "url": "https://www.smallslive.com/",
+        "date": "April 10, 2025",
+        "time": "9:30 PM",
+        "location": "183 W 10th St, New York, NY 10014",
+        "map": "https://www.google.com/maps/dir//small%20jazz%20club%20nyc"
+    }
+]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+
+<body>
+    <!-- Load Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^2.10.0/dist/decap-cms.js"></script>
+
+    <script>
+        // Initialize CMS
+        if (typeof CMS !== "undefined") {
+            CMS.init();
+        } else {
+            console.error("CMS is not defined. Check if the Netlify CMS script is loading correctly.");
+        }
+    </script>
+</body>
+
+</html>

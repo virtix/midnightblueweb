@@ -195,64 +195,13 @@
         </article>
     </section>
 
+   <!--  Events Section -->
     <section id="events" class="events">
         <div class="events__wrapper">
             <header class="events__header">
                 <h3 class="events__title">Our Upcoming Events</h3>
             </header>
-            <div class="events__list">
-                <article class="event">
-                    <h4 class="event__title">
-                        <a href="https://www.bluenotejazz.com/nyc/" target="_blank">Blue Note Jazz Club</a>
-                    </h4>
-                    <div class="event__details">
-                        <p class="event__meta"><strong>Date:</strong> April 15, 2025
-                        </p>
-                        <p class="event__meta"> <strong>Time:</strong> 8:00 PM
-                        </p>
-                        <p class="event__meta">
-                            <a href="https://www.google.com/maps/dir//blue%20note%20club%20nyc" target="_blank">
-                                <img src="images/map.svg" alt="map icon">
-                                131 W 3rd St, <strong>New York</strong>, NY 10012
-                            </a>
-                        </p>
-                    </div>
-                </article>
-                <article class="event">
-                    <h4 class="event__title"><a href="https://www.smallslive.com/" target="_blank">Smalls Jazz Club</a>
-                    </h4>
-                    <div class="event__details">
-                        <p class="event__meta">
-                            <strong>Date:</strong> April 10, 2025
-                        </p>
-                        <p class="event__meta">
-                            <strong>Time:</strong> 9:30 PM
-                        </p>
-                        <p class="event__meta">
-                            <a href="https://www.google.com/maps/dir//small%20jazz%20club%20nyc" target="_blank"><img
-                                    src="images/map.svg" alt="map icon">
-                                183 W 10th St, <strong>New York</strong> NY 10014</a>
-                        </p>
-                    </div>
-                </article>
-                <article class="event">
-                    <h4 class="event__title">
-                        <a href="https://greenmilljazz.com/" target="_blank">The Green
-                            Mill</a>
-                    </h4>
-                    <div class="event__details">
-                        <p class="event__meta"><strong>Date:</strong> May 20, 2025 </p>
-                        <p class="event__meta">
-                            <strong>Time:</strong> 9:30 PM
-                        </p>
-                        <p class="event__meta">
-                            <a href="https://www.google.com/maps/dir//green%20mill%20chicago" target="_blank"><img
-                                    src="images/map.svg" alt="map icon">
-                                4802 N Broadway, <strong>Chicago</strong> IL 60640</a>
-                        </p>
-                    </div>
-                </article>
-            </div>
+            <div class="events__list"></div>
         </div>
     </section>
 
@@ -432,7 +381,36 @@
 
 
 
+<script>
+        fetch('https://raw.githubusercontent.com/virtix/midnightblueweb/main/events.json')
+            .then(response => response.json())
+            .then(events => {
+                const eventsList = document.querySelector('.events__list');
+                eventsList.innerHTML = '';
 
+                events.forEach(event => {
+                    const eventElement = `
+            <article class="event">
+                <h4 class="event__title">
+                    <a href="${event.url}" target="_blank">${event.title}</a>
+                </h4>
+                <div class="event__details">
+                    <p class="event__meta"><strong>Date:</strong> ${event.date}</p>
+                    <p class="event__meta"><strong>Time:</strong> ${event.time}</p>
+                    <p class="event__meta">
+                        <a href="${event.map}" target="_blank">
+                            <img src="/mbot/images/map.svg" alt="map icon">
+                                ${event.location}
+                        </a>
+                    </p>
+                </div>
+            </article>
+              `;
+                    eventsList.innerHTML += eventElement;
+                });
+            })
+            .catch(error => console.error('Error loading events:', error));
+    </script>
 
 </body>
 
