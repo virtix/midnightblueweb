@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
+  //Maybe use a GIST or parse google calendar
   fetch("https://raw.githubusercontent.com/virtix/midnightblueweb/main/events.json")
     .then((response) => response.json())
     .then((events) => {
