@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p class="event__meta"><strong>Time:</strong> ${event.time}</p>
                             <p class="event__meta">
                                 <a href="${event.map}" target="_blank">
-                                    <img src="images/map.svg" alt="map icon">
+                                    <img src="../images/map.svg" alt="map icon">
                                     ${event.location}
                                 </a>
                             </p>
