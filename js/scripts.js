@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   
   //Maybe use a GIST or parse google calendar
-  fetch("https://raw.githubusercontent.com/virtix/midnightblueweb/main/events.json")
+  //OLD :  https://raw.githubusercontent.com/virtix/midnightblueweb/main/events.json
+  var json_calendar = 'https://gist.githubusercontent.com/virtix/7c31933cae0830ba166c9cdd594e325c/raw/c77886187e3af2f3bc6fe183cbac3f4d291baa20/events.json';
+
+  fetch(json_calendar)
     .then((response) => response.json())
     .then((events) => {
       const eventsList = document.querySelector(".events__list");
