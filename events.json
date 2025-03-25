@@ -1,14 +1,3 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     ENTRY FORMAT:
-  {
-        "title": "Nme of venue",
-        "url": "venue website",
-        "date": "date of gig",
-        "time": "downbeat time",
-        "location": "street address, city, state, zip",
-        "map": "Link to google maps"
-    },
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 [
     
