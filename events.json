@@ -1,5 +1,27 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     ENTRY FORMAT:
+  {
+        "title": "Nme of venue",
+        "url": "venue website",
+        "date": "date of gig",
+        "time": "downbeat time",
+        "location": "street address, city, state, zip",
+        "map": "Link to google maps"
+    },
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 [
-    {
+    
+   {
+        "title": "Kennedy Center, Washington DC",
+        "url": "https://www.kennedy-center.org/",
+        "date": "March 28, 2025",
+        "time": "7:30 PM",
+        "location": "12700 F St., NW, Washington, D.C. 20566",
+        "map": "https://maps.app.goo.gl/RUXQYmcbu2mQYiUH7"
+    },
+  
+  {
         "title": "Blue Note Jazz Club",
         "url": "https://www.bluenotejazz.com/nyc/",
         "date": "April 15, 2025",
@@ -17,10 +39,11 @@
     },
    {
         "title": "Blues Alley, Washington DC",
-        "url": "https://www.smallslive.com/",
+        "url": "hhttps://www.bluesalley.com/",
         "date": "June 10, 2025",
         "time": "7:30 PM",
         "location": "1073 Wisconsin Ave NW, Washington DC, DC 20007-3635",
         "map": "https://maps.app.goo.gl/BJPdXGYGhFJ5gM928"
     },
+  
 ]
