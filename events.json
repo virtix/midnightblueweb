@@ -14,5 +14,13 @@
         "time": "9:30 PM",
         "location": "183 W 10th St, New York, NY 10014",
         "map": "https://www.google.com/maps/dir//small%20jazz%20club%20nyc"
-    }
+    },
+   {
+        "title": "Blues Alley, Washington DC",
+        "url": "https://www.smallslive.com/",
+        "date": "June 10, 2025",
+        "time": "7:30 PM",
+        "location": "1073 Wisconsin Ave NW, Washington DC, DC 20007-3635",
+        "map": "https://maps.app.goo.gl/BJPdXGYGhFJ5gM928"
+    },
 ]
