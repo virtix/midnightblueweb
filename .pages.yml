@@ -1,1 +1,6 @@
 media: images
+content:
+  - name: index.html
+    label: INDEX
+    path: index.html
+    type: file
