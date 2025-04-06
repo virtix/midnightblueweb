@@ -185,7 +185,7 @@ section:before {
   display: block;
   font-size: clamp(2.5rem, 9vw, 6rem);
   color: #fff;
-  line-height: 1;
+  line-height: 4;
   font-weight: 700;
 }
 
