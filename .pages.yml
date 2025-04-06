@@ -1,0 +1,15 @@
+media: images
+content:
+  - name: index.html
+    label: Main Page
+    path: index.html
+    type: file
+  - name: events.json
+    label: Calendar Events
+    path: events.json
+    type: file
+  - name: main.css
+    label: Main Stylesheet
+    path: css/main.css
+    type: file
+    
