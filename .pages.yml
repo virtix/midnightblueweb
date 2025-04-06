@@ -8,3 +8,8 @@ content:
     label: Calendar Events
     path: events.json
     type: file
+  - name: main.css
+    label: Main Stylesheet
+    path: css/main.css
+    type: file
+    
