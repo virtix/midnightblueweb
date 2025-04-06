@@ -139,13 +139,15 @@ section:before {
   overflow: hidden;
 }
 
+
+/*  Change the img url here to update band photo/here */
 .hero__background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/sasquarch_organ_trio_edited.png") no-repeat
+  background: url("../images/band.png") no-repeat
     center center / cover;
   z-index: 1;
   margin: 0;
