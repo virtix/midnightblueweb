@@ -1,3 +1,8 @@
+@font-face {
+  font-family: gottam;
+  src: url(font/Gottam.woff2);
+}
+
 body {
   background: linear-gradient(
     90deg,
