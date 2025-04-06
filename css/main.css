@@ -1,7 +1,4 @@
-@font-face {
-  font-family: gottam;
-  src: url(font/Gottam.woff2);
-}
+
 
 body {
   background: linear-gradient(
@@ -181,7 +178,7 @@ section:before {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   color: #fff;
   line-height: 1;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Gottam";
   text-align: center;
   font-weight: 300;
 }
