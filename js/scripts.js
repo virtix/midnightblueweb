@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   
-  //Maybe use a GIST or parse google calendar
-  //OLD :  https://raw.githubusercontent.com/virtix/midnightblueweb/main/events.json
-  //var json_calendar = 'https://gist.githubusercontent.com/virtix/7c31933cae0830ba166c9cdd594e325c/raw/c77886187e3af2f3bc6fe183cbac3f4d291baa20/events.json';
-
   fetch("https://raw.githubusercontent.com/virtix/midnightblueweb/main/events.json")
     .then((response) => response.json())
     .then((events) => {
@@ -11,10 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
       eventsList.innerHTML = "";
 
       events.forEach((event) => {
+        target = (event.url == "#contact")? "_self" : "_blank";
         const eventElement = `
                     <article class="event">
                         <h4 class="event__title">
-                            <a href="${event.url}" target="_blank">${event.title}</a>
+                            <a href="${event.url}" target="${target}">${event.title}</a>
                         </h4>
                         <div class="event__details">
                             <p class="event__meta"><strong>Date:</strong> ${event.date}</p>
