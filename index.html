@@ -4,14 +4,16 @@
 
 <head>
 
-     <!-- HTML Meta Tags -->
+    <!-- HTML Meta Tags -->
     <title> The Midnight Blue Organ Trio </title>
-    <meta name="description" content="Discover the soulful grooves of the Midnight Blue Organ Trio, a world-renowned jazz trio, blending classic and modern sounds based in Washington, D.C.">
+    <meta name="description"
+        content="Discover the soulful grooves of the Midnight Blue Organ Trio, a world-renowned jazz trio, blending classic and modern sounds based in Washington, D.C.">
 
     <link rel="icon" type="image/png" href="images/mbot_logo2.png">
 
     <meta property="og:title" content="The Midnight Blue Organ Trio ">
-    <meta property="og:description" content="Midnight Blue Organ Trio: where vintage jazz cool gets a fresh D.C. shine &mdash; think smoky clubs, crisp suits, and the occasional odd meter.">
+    <meta property="og:description"
+        content="Midnight Blue Organ Trio: where vintage jazz cool gets a fresh D.C. shine &mdash; think smoky clubs, crisp suits, and the occasional odd meter.">
     <meta property="og:image" content="https://www.midnightblueorgantrio.com/images/web_snapshot.png">
     <meta property="og:url" content="https://www.midnightblueorgantrio.com/">
     <meta property="og:type" content="website">
@@ -83,9 +85,20 @@
 
     <!--Hero section-->
     <section class="hero">
-        <figure class="hero__background" role="img" aria-label="Band performing live"></figure>
+        <figure class="hero__background">
+            <picture>
+                <!-- Use the large image for screens 1025px and up -->
+                <source srcset="images/band-l.webp" media="(min-width: 1025px)" type="image/webp">
+
+                <!-- Use the large image for screens 414px and up -->
+                <source srcset="images/band-m.webp" media="(min-width: 414px)" type="image/webp">
+
+                <!-- Default (small) image for anything below 413px -->
+                <img src="images/band.webp" alt="Band performing live" width="100%" height="auto" decoding="async">
+            </picture>
+        </figure>
         <div class="hero__content">
-            <h1 class="hero__title"><span>Midnight Blue Organ Trio</span><!--Organ Trio-->&nbsp;</h1>
+            <h1 class="hero__title"><span>Midnight Blue Organ Trio</span></h1>
             <h2 class="hero__subtitle"><strong>Classic Jazz Organ Trio</strong> <span>|</span> Soulful Grooves &
                 Timeless Sounds
             </h2>
@@ -120,9 +133,12 @@
                     <h4>Lee</h4>
                 </header>
                 <div>
-                    <p> NASA engineer by day and  keyboardist by night (and day) Lee Feinberg plays in several jazz and blues bands 
-                        in the D.C. area. He plays both piano and Hammond organ with the Allman Others Band and is holding down 
-                        the bass in his left hand while playing the classic Hammond organ for the Midnight Blue organ trio</p>
+                    <p> NASA engineer by day and keyboardist by night (and day) Lee Feinberg plays in several jazz and
+                        blues bands
+                        in the D.C. area. He plays both piano and Hammond organ with the Allman Others Band and is
+                        holding down
+                        the bass in his left hand while playing the classic Hammond organ for the Midnight Blue organ
+                        trio</p>
                 </div>
             </figure>
             <figure>
@@ -134,8 +150,10 @@
                     <p>After graduating from Berklee College of Music in the ‘80s, Billy promptly forgot everything he
                         learned and started backing songwriters in Los Angeles and D.C. — until he forgot how to do
                         that, too, and accidentally became a software engineer. Decades later, Billy woke from his
-                        musical slumber, remembered that he knew jazz guitar, and bravely quit his coding job. These days,
-                        he’s back on stage, where audiences agree: he doesn’t suck — well, at least not nearly as much as
+                        musical slumber, remembered that he knew jazz guitar, and bravely quit his coding job. These
+                        days,
+                        he’s back on stage, where audiences agree: he doesn’t suck — well, at least not nearly as much
+                        as
                         before.</p>
                 </div>
             </figure>
@@ -145,12 +163,15 @@
                     <h4>Jon</h4>
                 </header>
                 <div>
-                    <p> 
-                        As a young man, Jon left music school in Miami to study percussion in Southern Africa. 
-                        There he discovered his knack for humanitarian work — turns out, saving the world pairs nicely with drumming. 
-                        Along the way, he picked up an eclectic mix of inspirations. These global grooves, and his incurable wanderlust, 
-                        spill out in his music. Now slightly less young, Jon can be found playing in various jazz groups and orchestras in DC, 
-                        and occasionally Copenhagen. 
+                    <p>
+                        As a young man, Jon left music school in Miami to study percussion in Southern Africa.
+                        There he discovered his knack for humanitarian work — turns out, saving the world pairs nicely
+                        with drumming. 
+                        Along the way, he picked up an eclectic mix of inspirations. These global grooves, and his
+                        incurable wanderlust,
+                        spill out in his music. Now slightly less young, Jon can be found playing in various jazz groups
+                        and orchestras in DC,
+                        and occasionally Copenhagen.
 
                     </p>
                 </div>
@@ -160,7 +181,7 @@
 
 
     <!--  Video Section-->
-   <!--
+    <!--
     <section id="video" class="video">
         <article class="video__wrapper">
             <header>
@@ -210,7 +231,7 @@
 
 
 
-   <!--  Events Section -->
+    <!--  Events Section -->
     <section id="events" class="events">
         <div class="events__wrapper">
             <header class="events__header">
@@ -225,7 +246,7 @@
 
 
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
           Subscribe form for friends, fans, and family:  
   
@@ -234,19 +255,17 @@
 
         <div class="subscribe__wrapper">
             <header>
-                <h3>Sign up  to get notified of upcoming shows!</h3>
+                <h3>Sign up to get notified of upcoming shows!</h3>
                 <p>Low volume. Promise!</p>
             </header>
             <div id="mc_embed_signup">
 
-              <!-- START Mailchip code -->
-              
-                <form action="https://if.us10.list-manage.com/subscribe/post?u=7f74bcba8dbf7f096bf95f869&amp;id=100939d936&amp;f_id=0097c8e5f0"
-                    method="post" 
-                    id="mc-embedded-subscribe-form" 
-                    name="mc-embedded-subscribe-form" 
-                    class="gig-form validate"
-                    target="_blank">
+                <!-- START Mailchip code -->
+
+                <form
+                    action="https://if.us10.list-manage.com/subscribe/post?u=7f74bcba8dbf7f096bf95f869&amp;id=100939d936&amp;f_id=0097c8e5f0"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                    class="gig-form validate" target="_blank">
                     <div id="mc_embed_signup_scroll">
                         <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                         <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
@@ -262,7 +281,8 @@
                             <div class="response" id="mce-success-response" style="display: none;"></div>
                         </div>
                         <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                            /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                            /* real people should not fill this in and expect good things - do not remove this or risk
+                            form bot signups */
                             <input type="text" name="b_7f74bcba8dbf7f096bf95f869_100939d936" tabindex="-1" value="">
                         </div>
                         <div class="optionalParent">
@@ -289,7 +309,7 @@
             type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 
         <!-- End Mailchip Code -->
-      
+
     </section>
 
     </section>
@@ -326,72 +346,84 @@
 
 
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
           Booking Interest form for venues  
   
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- START Mailchimp Code. Omit Stylesheet info from MC code. class="gig-form" to form tag-->
+            <!-- START Mailchimp Code. Omit Stylesheet info from MC code. class="gig-form" to form tag-->
 
 
-<div id="mc_embed_signup">
+            <div id="mc_embed_signup">
 
-    <form action="https://if.us10.list-manage.com/subscribe/post?u=7f74bcba8dbf7f096bf95f869&amp;id=100939d936&amp;f_id=009fc8e5f0" 
-        method="post" 
-        id="mc-embedded-subscribe-form" 
-        name="mc-embedded-subscribe-form" 
-        class="gig-form validate" 
-        target="_blank">
+                <form
+                    action="https://if.us10.list-manage.com/subscribe/post?u=7f74bcba8dbf7f096bf95f869&amp;id=100939d936&amp;f_id=009fc8e5f0"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                    class="gig-form validate" target="_blank">
 
-        <div id="mc_embed_signup_scroll"><h2>Request Booking Info</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-              
-              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-              <div class="mc-field-group"><label for="mce-FNAME">Your Name <span class="asterisk">*</span></label>
-                
-                <input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div><div class="mc-field-group"><label for="mce-PHONE">Phone Number </label>
-                
-                <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value=""></div><div class="mc-field-group"><label for="mce-COMPANY">Venue <span
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Request Booking Info</h2>
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+
+                        <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
                                     class="asterisk">*</span></label>
-                
-                <input type="text" name="COMPANY" class=" text" id="mce-COMPANY" value=""></div><div class="mc-field-group"><label for="mce-MMERGE2">Anything else you want to share, like dates and times? </label>
 
-                <textarea rows="10" type="text" name="MMERGE2" class="text" id="mce-MMERGE2" value=""></textarea>
-            
-            </div>
-          
-        <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display: none;"></div>
-            <div class="response" id="mce-success-response" style="display: none;"></div>
-        </div>
+                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                        </div>
+                        <div class="mc-field-group"><label for="mce-FNAME">Your Name <span
+                                    class="asterisk">*</span></label>
 
-    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-        <input type="text" name="b_7f74bcba8dbf7f096bf95f869_100939d936" tabindex="-1" value="">
-    </div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Send Booking Request">
+                            <input type="text" name="FNAME" class=" text" id="mce-FNAME" value="">
+                        </div>
+                        <div class="mc-field-group"><label for="mce-PHONE">Phone Number </label>
 
-                <!--
+                            <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="">
+                        </div>
+                        <div class="mc-field-group"><label for="mce-COMPANY">Venue <span
+                                    class="asterisk">*</span></label>
+
+                            <input type="text" name="COMPANY" class=" text" id="mce-COMPANY" value="">
+                        </div>
+                        <div class="mc-field-group"><label for="mce-MMERGE2">Anything else you want to share, like dates
+                                and times? </label>
+
+                            <textarea rows="10" type="text" name="MMERGE2" class="text" id="mce-MMERGE2"
+                                value=""></textarea>
+
+                        </div>
+
+                        <div id="mce-responses" class="clear foot">
+                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                            /* real people should not fill this in and expect good things - do not remove this or risk
+                            form bot signups */
+                            <input type="text" name="b_7f74bcba8dbf7f096bf95f869_100939d936" tabindex="-1" value="">
+                        </div>
+                        <div class="optionalParent">
+                            <div class="clear foot">
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
+                                    value="Send Booking Request">
+
+                                <!--
                 <p style="margin: 0px auto;"><a href="http://eepurl.com/i_9EIs" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
                 -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
-    </div>
-</form>
-</div>
 
-<!--  Do we need this JS twice? 
+            <!--  Do we need this JS twice? 
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[6]='COMPANY';ftypes[6]='text';fnames[2]='MMERGE2';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
 -->
-          
-           
 
-  <!-- END Mailchimp Code -->
-      
+
+
+            <!-- END Mailchimp Code -->
+
     </section>
 
     </section>
@@ -427,8 +459,8 @@
     </footer>
 
 
-<!-- Should load and populate the calendar -->
-<script type="text/javascript" src="js/scripts.js"></script>
+    <!-- Should load and populate the calendar -->
+    <script type="text/javascript" src="js/scripts.js"></script>
 
 
 

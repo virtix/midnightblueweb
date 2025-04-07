@@ -1,4 +1,8 @@
-
+/* !!! Bill, adjust the title distance from the top here. !!! */
+:root {
+  --title-top-mobile: 40px;
+  --title-top-desktop: 170px;
+}
 
 body {
   background: linear-gradient(
@@ -16,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-
 
 h3 {
   margin-bottom: 2rem;
@@ -71,6 +74,7 @@ section:before {
   display: inline-block;
   margin-left: 1rem;
   width: 100px;
+  padding-top: 10px;
 }
 
 .header .logo img {
@@ -79,6 +83,27 @@ section:before {
 
 .header .logo:hover img {
   opacity: 1;
+}
+
+@media (max-width: 499px) {
+  .main-nav a {
+    font-size: 1rem;
+  }
+
+  .header .main-nav li {
+    margin: 0 0.4rem;
+  }
+
+  .header .main-nav__nav {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 413px) {
+  .header .main-nav li {
+    margin: 0 0.4rem;
+  }
 }
 
 /*  TOP NAV */
@@ -97,7 +122,9 @@ section:before {
 .main-nav__social {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 160px;
+  width: 135px;
+  margin: 0;
+  padding: 0.4rem 0;
 }
 .main-nav__social li {
   list-style-type: none;
@@ -133,26 +160,25 @@ section:before {
 
 /*  HERO  */
 .hero {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
+  padding-top: var(--title-top-mobile);
 }
 
-
-/*  Change the img url here to update band photo/here */
 .hero__background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/band.jpg") no-repeat
-    center center / cover;
   z-index: 1;
   margin: 0;
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero__background:before {
@@ -164,9 +190,15 @@ section:before {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+}
+
+.hero__background picture,
+.hero__background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
 }
 
 .hero__content {
@@ -175,7 +207,7 @@ section:before {
   max-width: 90%;
   height: auto;
   padding: 2rem;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .hero__title {
@@ -186,13 +218,14 @@ section:before {
   font-family: "Gottam";
   text-align: center;
   font-weight: 300;
+  margin: 0;
 }
 
 .hero__title span {
   display: block;
   font-size: clamp(2.5rem, 9vw, 6rem);
   color: #fff;
-  line-height: 4;
+  line-height: 1.5;
   font-weight: 700;
 }
 
@@ -217,23 +250,45 @@ section:before {
   .hero__subtitle span {
     display: none;
   }
+
   .hero__title span {
     display: block;
-    font-size: 3.3rem;
-    margin: 1rem 0;
+    margin: 1rem 0 0;
   }
 
   .main-nav a {
     font-size: 1rem;
   }
+}
 
-  .header .main-nav li {
-    margin: 0 1rem;
+@media screen and (min-width: 48rem) {
+  .hero {
+    padding-top: var(--title-top-desktop);
   }
 
-  .header .main-nav__nav {
-    margin-left: 0;
-    padding: 0;
+  .hero__background {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hero__background picture,
+  .hero__background img {
+    object-position: center;
+  }
+}
+
+@media screen and (min-width: 65.5rem) {
+  .hero {
+    height: 100vh;
+    max-height: 1080px;
+  }
+
+  .hero__background {
+    height: 100%;
+  }
+
+  .main-nav__social {
+    width: 160px;
   }
 }
 
@@ -291,6 +346,10 @@ section:before {
   }
 
   .about header h3 {
+    padding-right: 1rem;
+  }
+
+  .about header h3 {
     margin: 0;
   }
 
@@ -331,6 +390,11 @@ section:before {
 
   .about-bio__wrapper figure p {
     font-size: 1.125rem;
+  }
+
+  .social-nav {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -554,7 +618,7 @@ section:before {
 .main-nav li {
   display: inline-block;
   font-size: 0.75rem;
-  margin-left: 1.9625rem;
+  margin-left: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
 }
