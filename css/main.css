@@ -173,6 +173,7 @@ section:before {
   position: relative;
   z-index: 5;
   max-width: 90%;
+  height: auto;
   padding: 2rem;
   opacity: .75;
 }
