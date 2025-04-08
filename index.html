@@ -320,28 +320,35 @@
                             <div id="mc_embed_signup_scroll">
                                 <h2>Request Booking Info</h2>
                                 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+
                                 <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
                                             class="asterisk">*</span></label><input type="email" name="EMAIL"
                                         class="required email" id="mce-EMAIL" required="" value=""></div>
+                                
                                 <div class="mc-field-group"><label for="mce-FNAME">Your Name <span
                                             class="asterisk">*</span></label><input type="text" name="FNAME"
                                         class="required text" id="mce-FNAME" required="" value=""></div>
+                                
                                 <div class="mc-field-group"><label for="mce-PHONE">Phone Number
                                     </label><input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="">
                                 </div>
+                               
                                 <div class="mc-field-group"><label for="mce-COMPANY">Venue <span
                                             class="asterisk">*</span></label><input type="text" name="COMPANY"
                                         class="required text" id="mce-COMPANY" required="" value=""></div>
+                                
                                 <div class="mc-field-group"><label for="mce-MMERGE2">Please share a detail or 2, like dates, times, or anything else.<span
                                             class="asterisk">*</span>
                                     </label><textarea rows="10" type="text" name="MMERGE2" class="text" id="mce-MMERGE2"
                                         value=""
                                         data-csext-root-mirror-id="csext-root-mirror-d574932074f9a6ecd6030d3d2f00f6d0"></textarea>
                                 </div>
+                                
                                 <div id="mce-responses" class="clear foot">
                                     <div class="response" id="mce-error-response" style="display: none;"></div>
                                     <div class="response" id="mce-success-response" style="display: none;">Thank you! We'll be in touch ASAP.</div>
                                 </div>
+
                                 <div aria-hidden="true" style="position: absolute; left: -5000px;">
                                     /* real people should not fill this in and expect good things - do not remove this
                                     or risk form bot signups */
@@ -390,7 +397,8 @@
                                     contentType: 'application/json; charset=utf-8',
                                     success: function (resp) {
                                         if (resp.result === 'success') {
-                                            $form.find('#mce-success-response').show().html(resp.msg);
+                                            //Default-->  $form.find('#mce-success-response').show().html(resp.msg);
+                                            $form.find('#mce-success-response').show().html("Thanks! We\'ll be in touch ASAP.");
                                             $form[0].reset();
                                         } else {
                                             $form.find('#mce-error-response').show().html(resp.msg);
