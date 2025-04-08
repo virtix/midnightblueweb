@@ -1,7 +1,7 @@
 /* !!! Bill, adjust the title distance from the top here. !!! */
 :root {
   --title-top-mobile: 40px;
-  --title-top-desktop: 170px;
+  --title-top-desktop: 125px;
 }
 
 body {
