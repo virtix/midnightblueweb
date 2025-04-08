@@ -398,7 +398,10 @@
                                     success: function (resp) {
                                         if (resp.result === 'success') {
                                             //Default-->  $form.find('#mce-success-response').show().html(resp.msg);
-                                            $form.find('#mce-success-response').show().html("Thanks! We\'ll be in touch ASAP.");
+
+                                            //Replace it with sumpin' better, but not sure this is working ...?
+                                            var success_msg = "Thanks! We\'ll be in touch ASAP.";
+                                            $form.find('#mce-success-response').show().html(success_msg);
                                             $form[0].reset();
                                         } else {
                                             $form.find('#mce-error-response').show().html(resp.msg);
